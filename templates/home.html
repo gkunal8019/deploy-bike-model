@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>bike demand Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="season_Spring" placeholder="season_Spring" required="required" /><br>
+    	<input type="text" name="hour" placeholder="hour" required="required" /><br>
+        <input type="text" name="temp" placeholder="temp" required="required" /><br>
+        <input type="text" name="humidity" placeholder="humidity" required="required" /><br>
+        <input type="text" name="wind" placeholder="wind" required="required" /><br>
+        <input type="text" name="visibility" placeholder="visibility" required="required" /><br>
+        <input type="text" name="dew_temp" placeholder="dew_temp" required="required" /><br>
+        <input type="text" name="sunlight" placeholder="sunlight" required="required" /><br>
+        <input type="text" name="rain" placeholder="rain" required="required" /><br>
+        <input type="text" name="snow" placeholder="snow" required="required" /><br>
+        <input type="text" name="season_Winter" placeholder="season_Winter" required="required" /><br>
+        <input type="text" name="holiday_No Holiday" placeholder="holiday_No Holiday" required="required" /><br>
+        <input type="text" name="functioning_day_Yes" placeholder="functioning_day_Yes" required="required" /><br>
+        <input type="text" name="season_Summer" placeholder="season_Summer" required="required" /><br>
+        <input type="text" name="timeshift_evening" placeholder="timeshift_evening" required="required" /><br>
+        <input type="text" name="timeshift_night" placeholder="timeshift_night" required="required" /><br>
+        <input type="text" name="weekend" placeholder="weekend" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
